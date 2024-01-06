@@ -1,21 +1,15 @@
 "use client"
-/* eslint-disable @next/next/no-img-element */
-import type { Metadata } from 'next'
+
 // import { Inter } from 'next/font/google'
-// import './styles/globals.css'
+import './styles/globals.css'
 
 // panggil file "styles.module.css"
 import style from "./styles/style.module.css";
 
 // panggil file tailwind
-import "tailwindcss/tailwind.css"
+// import "tailwindcss/tailwind.css"
 import Link from 'next/link'
 import { useRouter } from 'next/navigation';
-
-
-
-
- 
 
 export default function MainLayout({
   children,
@@ -29,6 +23,11 @@ export default function MainLayout({
     router.push(url)
   }
 
+  const menuItem=(url:string,title:string, className?:string)=>(
+    <div className={`bg-black text-white py-2 px-3 rounded-lg ${className}`}><Link href={url}>{title}</Link></div>
+
+  )
+
   return (
     <html lang="en">
       <head>
@@ -36,18 +35,23 @@ export default function MainLayout({
         <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
         <title>Home</title>
       </head>
-      <body className={style.layout}>
+      <body className="container mx-auto py-5 {style.layout}">
         <header className={style.header}>
           {/* <img src="./images/logo.png" alt="logo" /> */}
         </header>
 
-        <ul>
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/dashboard">Dashboard</Link></li>
-          <li><Link href="/setting">Setting</Link></li>
-          <li><Link href="/calculator">Calculator</Link></li>
-          <li><Link href="/search">Search</Link></li>
-        </ul>
+        <div className='inline-flex  w-full '>
+        {menuItem("/", "Home","bg-white text-blue-500 text-lg")}
+
+          <div className='inline-flex space-x-3 justify-end w-full'>
+            {menuItem("/dashboard", "Dashboard")}
+            {menuItem("/setting", "Setting")}
+            {menuItem("/calculator", "Calculator")}
+            {menuItem("/search", "Search")}
+          </div>
+        </div>
+
+        
         
         <section className={`${style.content} ${style.content_bg}`}>
         {children}
