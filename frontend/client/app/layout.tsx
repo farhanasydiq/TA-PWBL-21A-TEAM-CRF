@@ -23,10 +23,7 @@ export default function MainLayout({
     router.push(url)
   }
 
-  const menuItem=(url:string,title:string, className?:string)=>(
-    <div className={`bg-black text-white py-2 px-3 rounded-lg ${className}`}><Link href={url}>{title}</Link></div>
-
-  )
+  
 
   return (
     <html lang="en">
@@ -35,23 +32,19 @@ export default function MainLayout({
         <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
         <title>Home</title>
       </head>
-      <body className="container mx-auto py-5 {style.layout}">
+      <body className={style.layout}>
         <header className={style.header}>
           {/* <img src="./images/logo.png" alt="logo" /> */}
         </header>
 
-        <div className='inline-flex  w-full '>
-        {menuItem("/", "Home","bg-white text-blue-500 text-lg")}
-
-          <div className='inline-flex space-x-3 justify-end w-full'>
-            {menuItem("/dashboard", "Dashboard")}
-            {menuItem("/setting", "Setting")}
-            {menuItem("/calculator", "Calculator")}
-            {menuItem("/search", "Search")}
-          </div>
+        <div className='flex flex-1 items-center justify-center sm:items-stretch sm:justify-start bg-blue-300'>
+        <ul className='flex space-x-4 -end'>
+          <li className='text-gray-600 hover:bg-gray-700 hover:text-white rounded-md ml-10 px-4 py-2 text-sm font-medium'><Link href="/">Home</Link></li>
+          <li className='text-gray-600 hover:bg-gray-700 hover:text-white rounded-md px-4 py-2 text-sm font-medium'><Link href="/dashboard">Dashboard</Link></li>
+          <li className='text-gray-600 hover:bg-gray-700 hover:text-white rounded-md px-4 py-2 text-sm font-medium'><Link href="/setting">Setting</Link></li>
+          <li className='text-gray-600 hover:bg-gray-700 hover:text-white rounded-md px-4 py-2 text-sm font-medium'><Link href="/search">Search</Link></li>
+        </ul>
         </div>
-
-        
         
         <section className={`${style.content} ${style.content_bg}`}>
         {children}

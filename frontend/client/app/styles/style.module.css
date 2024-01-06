@@ -8,12 +8,12 @@
 .header
 {
     display: flex;
-    background-color: #a51c30;
+    background-color: skyblue;
     /* perataan horizontal */
-    justify-content: start;
+    justify-content: center;
     /* perataan vertikal */
     align-items: center;
-    padding: 10px;
+    padding: 15px;
 
     top: 0;
     position: sticky;
@@ -38,7 +38,7 @@
     justify-content: center;
     align-items: center;
     padding: 15px;
-    background-color: #a51c30;
+    background-color: skyblue;
     color: #ffffff;
     
     font-family: 'Caveat', cursive;
