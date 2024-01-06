@@ -20,25 +20,25 @@ Route::middleware('auth:sanctum')->get('/user',
     return $request->user();
 });
 
-Route::get('/mahasiswa/get',[Mahasiswa::class,
+Route::get('/siswa/get',[Siswa::class,
 'getController']); 
 
 
 // buat route untuk pencarian
-Route::get('/mahasiswa/search/{keyword}',[Mahasiswa::class,
+Route::get('/siswa/search/{keyword}',[Siswa::class,
 'searchController']); 
 // route untuk detail data
-Route::get('/mahasiswa/detail/{id}',[Mahasiswa::class,
+Route::get('/siswa/detail/{id}',[Siswa::class,
 'detailController']);
 
 // route untuk hapus data
-Route::delete('/mahasiswa/delete/{id}',[Mahasiswa::class,
+Route::delete('/siswa/delete/{id}',[Siswa::class,
 'deleteController']);
 
 //route untuk simpan data
-route::post('/mahasiswa/save',[Mahasiswa::class,
+route::post('/siswa/save',[Siswa::class,
 'saveController']);
 
 //route untuk ubah data
-route::put('/mahasiswa/update/{id}',[Mahasiswa::class,
+route::put('/siswa/update/{id}',[Siswa::class,
 'updateController']);
