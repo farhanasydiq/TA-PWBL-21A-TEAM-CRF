@@ -16,8 +16,17 @@
     padding: 15px;
 
     top: 0;
-    position: sticky;
+    /* position: sticky;   */
 }
+
+.logo {
+    line-height: 50px;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #1e1e1e;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
 
 .content
 {
