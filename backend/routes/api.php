@@ -22,11 +22,16 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/guru/get',[Guru::class,
 'getController']);
+Route::get('/siswa/get', [Siswa::class,'getController']);
 
 // buat route untuk pencarian
 Route::get('/guru/search/{keyword}',[Guru::class,
+'searchController']);
+Route::get('/siswa/search/{keyword}',[Siswa::class,
 'searchController']); 
 
 // route untuk detail data
 Route::get('/guru/detail/{id}',[Guru::class,
+'detailController']);
+Route::get('/siswa/detail/{id}',[Siswa::class,
 'detailController']);

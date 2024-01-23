@@ -42,7 +42,7 @@ class Guru extends Controller
          // isi nilai variabel 'result' dari fungsi 'detailData' dari model "keyword"
          $result = $this->model->detailData($id);
  
-         // kembalikan nilai variabel 'result' ke dalam object 'mahasiswa'
+         // kembalikan nilai variabel 'result' ke dalam object 'guru'
          return response(["Guru" => $result], http_response_code());    
     }
 
