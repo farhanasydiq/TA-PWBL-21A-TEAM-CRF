@@ -7,8 +7,6 @@ async function getDataUser(param:string) {
 }
 
 
-
-
 export default async function DetailCari({params}:{params:{slug:string}}) {
   const dataUser = await getDataUser(params.slug)
 

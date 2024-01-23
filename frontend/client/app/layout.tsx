@@ -1,5 +1,4 @@
 "use client"
-
 // import { Inter } from 'next/font/google'
 import './styles/globals.css'
 
@@ -42,8 +41,8 @@ export default function MainLayout({
           <div className='flex flex-1 items-center justify-center sm:items-stretch sm:justify-start'>
           <ul className='flex space-x-4 '>
             <li className='text-gray-600 hover:bg-gray-700 hover:text-white rounded-md ml-10 px-4 py-2 text-sm font-medium'><Link href="/">Home</Link></li>
-            <li className='text-gray-600 hover:bg-gray-700 hover:text-white rounded-md px-4 py-2 text-sm font-medium'><Link href="/dashboard">Dashboard</Link></li>
-            <li className='text-gray-600 hover:bg-gray-700 hover:text-white rounded-md px-4 py-2 text-sm font-medium'><Link href="/setting">Setting</Link></li>
+            <li className='text-gray-600 hover:bg-gray-700 hover:text-white rounded-md px-4 py-2 text-sm font-medium'><Link href="/layanan">Layanan</Link></li>
+            <li className='text-gray-600 hover:bg-gray-700 hover:text-white rounded-md px-4 py-2 text-sm font-medium'><Link href="/about">About Us</Link></li>
             <li className='text-gray-600 hover:bg-gray-700 hover:text-white rounded-md px-4 py-2 text-sm font-medium'><Link href="/search">Search</Link></li>
           </ul>
 
