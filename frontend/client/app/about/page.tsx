@@ -15,20 +15,20 @@ export default function About() {
     <div className="col-lg-8 col-12 mx-auto">
                             <div className="pb-5 mb-5 grid-cols-3">
                                 <div className="section-title-wrap mb-4">
-                                    <h4 className="section-title">Tentang Bagikan Ceritamu</h4>
+                                    <h2 className="text-2xl font-bold">Tentang Bagikan Ceritamu</h2>
                                 </div>
                                 <div>
                                   
-                                <p>Saatnya kamu memiliki akses pada psikolog profesional yang sesuai dengan topik permasalahan yang sedang kamu alami. Bagikan Ceritamu memberikan kebebasan kamu bercerita apapun masalahnya dan bertemu ahlinya untuk mendapat jawaban-jawaban terbaik atas keluh kesahmu tanpa khawatir keamanan, karena setiap informasi data yang kami terima akan kami jaga kerahasiaannya.</p>
+                                <p className=" text-justify text-lg">Saatnya kamu memiliki akses pada psikolog profesional yang sesuai dengan topik permasalahan yang sedang kamu alami. Bagikan Ceritamu memberikan kebebasan kamu bercerita apapun masalahnya dan bertemu ahlinya untuk mendapat jawaban-jawaban terbaik atas keluh kesahmu tanpa khawatir keamanan, karena setiap informasi data yang kami terima akan kami jaga kerahasiaannya.</p>
 
                                   <div className=" grid grid-col-2">
-                                    <h4>Visi</h4>
+                                    <h2 className="text-xl font-semibold">Visi</h2>
                                     <p>Menumbuhkan, merawat dan menjaga rasa kepercayaan diri pada setiap individu bahwa dirinya adalah anugerah terbaik dari Tuhan</p>
                                   </div>
 
                                   <div className="grid grid-col-2">
-                                    <h4>Misi</h4>
-                                    <ul>
+                                    <h2 className="text-xl font-semibold">Misi</h2>
+                                    <ul className=" text-justify text-lg">
                                       <li>Memberikan akses layanan psikolog profesional yang mudah dan terjangkau bagi semua kalangan.</li>
                                       <li>Menjadi teman bercerita masalah kesehatan mental yang memberikan keamanan dan kenyamanan.</li>
                                       <li>Menjadi jembatan terjalinnya koneksivitas yang baik antara individu dengan psikolog.</li>
