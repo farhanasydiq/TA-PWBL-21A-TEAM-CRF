@@ -67,6 +67,8 @@ class Siswa extends Controller
             $status = 0;
             $message = "Data Gagal Dihapus ! (id TIDAK DITEMUKAN !)";
         }
+        return response(["status" => $status, "message" => $message], http_response_code());
+    }    
 
         // buat fungsi untuk simpan data 
     function saveController(Request $req)
@@ -137,7 +139,7 @@ class Siswa extends Controller
         {
             $status = 0;
             $message = "Data Gagal Diubah (nis tidak ditemukan)";
-
+        }
         return response(["status" => $status, "message" => $message], http_response_code());
-    }
+  }
 }
