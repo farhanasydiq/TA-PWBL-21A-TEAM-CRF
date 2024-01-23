@@ -49,4 +49,50 @@ class Ssiswa extends Model
 // mengirim hasil variabel "query" ke controller "siswa"
 return $query;
    }
+
+    // buat fungsi untuk simpan data
+    function saveData($id,$nama,$email,$telfon,)
+    {
+        //ambil data
+        $result = [
+            "nis" => $nis,
+            "nama" => $nama,
+            "email" => $email,
+            "telfon" => $telfon,
+        ];
+        // perintah simpan data
+        DB::table("tb_guru")
+            ->insert($result);
+    }
+    function checkUpdateData($npm,$id)
+    {
+        $query = DB::table('tb_guru')
+        ->select("id as id_siswa","nis as nis_siswa","nama as nama_ siswa","email as email_siswa","telfon as number_phone",
+        "status as status_guru")
+        // ->where(DB::raw("TO_BASE64(MD5(id))"),"$id")
+        ->where(DB::raw("TO_BASE64(MD5(id))"), "!=", "$id")
+        ->where("id", "$id")
+        ->get();
+ 
+    // mengirim hasil variabel "query" ke controller "siswa"
+    return $query;
+    }
+ 
+        //fungsi ubah data 
+        function updateData ($id, $nama, $email, $telfon,)
+        {
+              //ambil data
+              $result = [
+                "nis" => $nis,
+                "nama" => $nama,
+                "email" => $email,
+                "telfon" => $telfon,
+            ];
+    
+            // perintah untuk ubah data
+            DB::table("tb_siswa")
+            ->where(DB::raw("TO_BASE64(MD5(id))"),"$id")
+            ->update($result);
+        }
+ 
 }

@@ -99,7 +99,7 @@ class Guru extends Controller
              // jika data tidak tersedia
              else
              {
-                 $this->model->saveData($data["id"],$data["nama"],$data["email"],$data["status"]$data["telfon"]);
+                 $this->model->saveData($data["id"],$data["nama"],$data["email"],$data["status"],$data["telfon"]);
                  // buat status dan pesan
                  $status = 1;
                  $message = "Data Berhasil Disimpan";
@@ -131,7 +131,7 @@ class Guru extends Controller
                  $this->model->updateData($data
                  ["id"],$data["nama"],$data
                  ["email"],$data["status"],$data["telfon"]
-                 $id);
+                 $ID);
      
                  $status = 1;
                  $message = "Data Berhasil Diubah";
